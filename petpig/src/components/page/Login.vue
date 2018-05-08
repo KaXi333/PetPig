@@ -12,7 +12,7 @@
                 <div class="login-btn">
                     <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
                 </div>
-                <p style="font-size:12px;line-height:30px;color:#999;">Tips : 用户名和密码随便填。</p>
+                <!-- <p style="font-size:12px;line-height:30px;color:#999;">Tips : 用户名和密码随便填。</p> -->
             </el-form>
         </div>
     </div>
@@ -23,8 +23,8 @@
         data: function(){
             return {
                 ruleForm: {
-                    username: 'admin',
-                    password: '123123'
+                    username: 'admin@admin.com',
+                    password: 'admin'
                 },
                 rules: {
                     username: [
@@ -40,8 +40,22 @@
             submitForm(formName) {
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        localStorage.setItem('ms_username',this.ruleForm.username);
-                        this.$router.push('/');
+                        this.$axios({
+                            method: 'post',
+                            url: '/Oauth',
+                            data: {
+                                email: this.ruleForm.username,
+                                password: this.ruleForm.password
+                            }
+                        }).then(res=>{
+                          console.log(res)
+                          this.$router.push('/');
+                          localStorage.setItem('ms_username',this.ruleForm.username);
+                          localStorage.setItem("token",res.data.data.token);
+                        })
+                        .catch(err=>{
+                          console.log(err)
+                        })
                     } else {
                         console.log('error submit!!');
                         return false;

@@ -31,91 +31,35 @@
                 collapse: false,
                 items: [
                     {
-                        icon: 'el-icon-setting',
-                        index: 'dashboard',
-                        title: '后台首页'
-                    },
-                    {
                         icon: 'el-icon-tickets',
                         index: 'table',
-                        title: '用户列表'
+                        title: '用户管理'
                     },
                     {
                         icon: 'el-icon-message',
                         index: 'tabs',
-                        title: '宠物猪列表',
-                        subs: [
-                            {
-                                index: 'form',
-                                title: '添加宠物猪'
-                            },
-                            {
-                                index: 'editor',
-                                title: '编辑宠物猪'
-                            }
-                        ]
+                        title: '分类管理'
                     },
                     {
                         icon: 'el-icon-date',
-                        index: '3',
-                        title: '宠物猪性格列表',
-                        subs: [
-                            {
-                                index: 'form',
-                                title: '添加宠物猪性格'
-                            },
-                            {
-                                index: 'editor',
-                                title: '编辑宠物猪性格'
-                            }
-                        ]
+                        index: 'Markdown',
+                        title: '属性管理'
                     },
                     {
                         icon: 'el-icon-star-on',
                         index: 'charts',
-                        title: '宠物猪等级',
-                        subs: [
-                            {
-                                index: 'form',
-                                title: '编辑宠物猪等级'
-                            }
-                        ]
+                        title: '事件管理'
                     },
                     {
                         icon: 'el-icon-rank',
                         index: 'drag',
-                        title: '宠物猪基因分类列表'
+                        title: '基因管理'
                     },
                     {
-                        icon: 'el-icon-warning',
+                        icon: 'el-icon-setting',
                         index: 'permission',
-                        title: '宠物猪基因等级列表'
-                    },
-                    {
-                        icon: 'el-icon-error',
-                        index: '404',
-                        title: '事件分类列表'
-                    },
-                    {
-                        icon: 'el-icon-rank',
-                        index: '1',
-                        title: '事件列表'
-                    },
-                    {
-                        icon: 'el-icon-rank',
-                        index: '1',
-                        title: '属性列表'
-                    },
-                    {
-                        icon: 'el-icon-rank',
-                        index: '1',
-                        title: '规则列表'
-                    },
-                    {
-                        icon: 'el-icon-rank',
-                        index: '1',
-                        title: '规则分类列表'
-                    },
+                        title: '性格管理'
+                    }
                 ]
             }
         },
